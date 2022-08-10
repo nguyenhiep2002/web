@@ -1,0 +1,89 @@
+<div class="container-fluid sticky-top header">
+    <div class="row">
+        <div class="logo col-lg-1 col-md-2 col-4">
+            <a routerLink=""><img src="assets/images/logo.webp" style="width: 85%;" alt=""></a>
+
+        </div>
+
+        <nav class="navbar navbar-expand-sm navbar-light  col-lg-11 col-md-10 col-8">
+
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" routerLink="">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" routerLink="Shop" >Shop<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="">Blog<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="diachi.html">About us<span class="sr-only">(current)</span></a>
+                    </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"  *ngIf="infor"><span>{{infor.userName}}</span></a>
+                                
+                                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false" *ngIf="!infor"><span>Tai khoan</span></a> 
+                               
+                            <div class="dropdown-menu " aria-labelledby="dropdownId">
+                                <a class="dropdown-item" routerLink="Singin">Login</a>
+                                <a class="dropdown-item" routerLink="Signup">Registration</a>
+                                <a class="dropdown-item" (click)="logout()">Log out</a>
+                            </div>
+                            
+                        </li>
+                    <!-- <li class="nav-item active">
+                        <a class="nav-link">{{infor.userName }}<span class="sr-only">(current)</span></a>
+                       
+                    </li> -->
+                </ul>
+                <div class="icon">
+                    <a href=""><img src="assets/images/heart.png" alt=""></a>
+                    <a routerLink="cart" class="anh"><img src="assets/images/shopping-bag.png" alt=""><small class="so">{{solg}}</small></a>
+                    <button data-toggle="modal" data-target="#exampleModal"
+                        style="border: none; background-color: #fff;"><img
+                            src="assets/images/search-interface-symbol.png" alt=""></button>
+                </div>
+                <form class="form-inline  my-2 my-lg-0">
+
+                    <input class="form-control mr-sm-2" type="text" placeholder="Sản phẩm">
+                    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Tìm</button>
+
+                </form>
+            </div>
+        </nav>
+
+    </div>
+
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content p-3">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tìm kiếm</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body ">
+                <div class="row">
+                    <input type="search" class="col-10" name="" id="" style="border-radius:5px ;">
+                    <a href="#" class=" col-2"><img src="images/search-interface-symbol.png" alt="" width="50%"></a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

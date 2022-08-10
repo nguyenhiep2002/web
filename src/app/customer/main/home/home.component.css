@@ -1,0 +1,242 @@
+/* * {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+} */
+.banner {
+    background-image: url("/assets/images/banner1.2.jpg");
+    background-size: cover;
+}
+
+.banner-text {
+    margin-left: 100px;
+}
+
+.banner-text h1 {
+    margin-top: 35%;
+
+    font-size: 100px;
+    text-transform: uppercase;
+    font-weight: 90;
+    line-height: 150px;
+    color: rgba(77, 77, 77, 1);
+
+}
+
+.banner-text span {
+    font-size: 160px;
+    color: rgba(77, 77, 77, 1);
+}
+.hot {
+    position: relative;
+}
+span, h1, h2,h4{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.hot .cart {
+    position: absolute;
+    top: 10px;
+    /* right: 10px; */
+    display: none;
+}
+
+.doi {
+    position: relative;
+}
+
+.doi .test {
+    display: none;
+    position: absolute;
+}
+
+.card {
+    border: 1.5px solid rgba(136, 130, 130, 0.452);
+}
+
+.noi {
+    box-shadow: 0 0 20px 3px rgb(121, 119, 119);
+}
+.hot {
+    position: relative;
+    border: 3px solid rgba(91, 69, 69, 0.452);
+}
+
+.hot .cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+}
+.doi:hover .test {
+    display: block;
+}
+.hot {
+    overflow: hidden !important;
+}
+
+.hot:hover img {
+    overflow: hidden !important;
+    transform: scale(1.1);
+    transition: 2.5s;
+}
+.hot:hover .cart {
+    display: block;
+}
+/* }
+@media (max-width:768px) {
+    .nav-link {
+        font-size: 90%;
+    }
+}
+
+@media (max-width:430px) {
+    .aicon {
+        margin-left: 25%;
+    }
+   
+    .text h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:380px) {
+    
+    .text h2 {
+        font-size: 12px;
+    }
+
+    .text1 h1 {
+        font-size: 15px;
+    }
+
+    .banner h1 {
+        margin-top: 50%;
+
+    }
+
+    .banner-text h1 span {
+        font-size: 75px;
+    }
+
+    .aicon {
+        margin-left: 20%;
+    }
+}
+
+@media (max-width:330px) {
+    .aicon {
+        margin-left: 15%;
+    }
+
+    .text h2 {
+        font-size: 15px;
+    }
+
+    .banner-text h1 span {
+        font-size: 75 px;
+    }
+
+    .noi {
+        box-shadow: none;
+    }
+} */
+@media (min-width:575px) {
+    .form-inline {
+        display: none;
+    }
+
+}
+
+@media (max-width:575px) {
+
+    .text1 h1 {
+        font-size: 20px;
+    }
+
+    .icon {
+        display: none;
+    }
+}
+
+@media (max-width:770px) {
+    .text h2 {
+        font-size: 40px;
+    }
+
+    .phai {
+        display: none;
+    }
+
+    .banner-text {
+        margin-left: 15px;
+    }
+
+    .banner h1 {
+        margin-top: 40%;
+        font-size: 50px;
+    }
+
+    .banner span {
+        font-size: 100px;
+    }
+
+    .aicon {
+        margin-left: 35%;
+    }
+}
+
+@media (max-width:768px) {
+    .nav-link {
+        font-size: 90%;
+    }
+}
+
+@media (max-width:430px) {
+    .aicon {
+        margin-left: 25%;
+    }
+
+    .text h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:380px) {
+    .text h2 {
+        font-size: 12px;
+    }
+
+    .text1 h1 {
+        font-size: 15px;
+    }
+
+    .banner h1 {
+        margin-top: 50%;
+
+    }
+
+    .banner-text h1 span {
+        font-size: 75px;
+    }
+
+    .aicon {
+        margin-left: 20%;
+    }
+}
+
+@media (max-width:330px) {
+    .aicon {
+        margin-left: 15%;
+    }
+
+    .text h2 {
+        font-size: 15px;
+    }
+
+    .banner-text h1 span {
+        font-size: 75 px;
+    }
+
+    .noi {
+        box-shadow: none;
+    }
+}

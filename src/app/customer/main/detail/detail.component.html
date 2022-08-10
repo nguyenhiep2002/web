@@ -1,0 +1,89 @@
+<div class="bannershop mb-4" style="background-image: url(assets/images/bannershop.png);">
+    <div class="text">
+        <h1>Chi tiết sản phẩm</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row mt-5 mb-5">
+        <div class="col-lg-6">
+            <div class="card">
+                <img class="card-img-top" src="{{detail2.anh}}" alt="">
+            </div>
+        </div>
+        <div class=" mat col-lg-6">
+            <h2>{{detail2.name}}</h2>
+            <h6 style="color: rgb(117, 112, 112);">Danh mục:Áo/Áo thun.</h6>
+            <div class="luachon">
+                <div class="size" style="width:30%">
+                    <div class="form-group">
+                        <label for="">Size</label>
+                        <select class="form-control" name="" id="">
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                            <option>XXL</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="soluong col-10">
+                    <span style="margin-right: 20px;">Số lượng:</span>
+                    <button class="tinh" id="tru" (click)="mark('-')">-</button>
+                    <input type="text" id="quantily" class="quantily-ip"  style="width: 50px;text-align: center;" value="1">
+                    <button class="tinh" id="cong" (click)="mark('+')">+</button>
+                </div>
+                <div class="giatien mt-2">
+                    <h4>{{detail2.price}}<span>đ</span></h4>
+                </div>
+                <div class="nutmua">
+                    <a ><button (click)="cart()"> Thêm vào giỏ hàng</button></a>
+        
+                </div>
+                <div class="thongtin">
+                    <p style="margin-top:10px;color:rgb(117, 112, 112);">
+                        Chi tiết sản phẩm <br>
+                        - Sản phẩm 100% cotton <br>
+                        - From áo cơ bản <br>
+                    </p>
+                    <button data-toggle="modal" data-target="#modelId" class="mr-3"
+                        style="border: none; padding: 0 5px;background-color: rgb(145, 140, 140);">Bảng size
+                        áo</button>
+                    <span><button data-toggle="modal" data-target="#modelId1" style=" border: none; padding: 0 5px;background-color: rgb(145, 140,
+                                                140);">Hướng
+                            dẫn bảo quản</button></span>
+        
+                </div>
+            </div>
+        
+        </div>
+
+    </div>
+</div>
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <img src="assets/images/size.webp" alt="" width="100%">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="modelId1" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <img src="assets/images/baoquan.webp" alt="" width="100%">
+                </div>
+            </div>
+        </div>
+    </div>

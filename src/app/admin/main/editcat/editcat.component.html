@@ -1,0 +1,16 @@
+<form [formGroup]="formedit" (ngSubmit)="onSubmit()">
+    <div class="form-group mt-5">
+        <label for="exampleInputEmail1">Tên danh mục :</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            formControlName="name">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Id danh mục :</label>
+        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            formControlName="id">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Cập nhật</button>
+    </div>
+
+</form>

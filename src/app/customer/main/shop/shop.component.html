@@ -1,0 +1,66 @@
+<div class="bannershop mb-4" style="background-image: url(assets/images/bannershop.png);">
+    <div class="text">
+        <h1>Tất cả sản phẩm</h1>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+    
+        <div class="danhmuc col-lg-3">
+            <div class="tim">
+                <nav class="navbar navbar-light bg-light mt-3">
+                    <div class="container-fluid">
+                        <div class="d-flex">
+                            <input class="form-control me-2 mr-2" type="search" placeholder="Sản phẩm" aria-label="Search"[(ngModel)]="keyword">
+                            <button class="btn btn-outline-dark" type="submit">Tìm</button>
+                         
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="loc">
+                <h5 class="dm">Danh mục</h5>
+                    <li><button (click)="full()"><h5>Tất cả sản phẩm</h5></button></li>
+                <ul class="toggle-menu" *ngFor="let item of danh">
+                    
+                    <li><button (click)="loc(item.id)">{{item.name}}</button></li>
+                   
+                </ul>
+            </div>
+    
+        </div>
+        <div class="allsanpham col-lg-9">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 " *ngFor="let item of all3 | search : keyword">
+                            <div class="card hot mb-4">
+                                <img class="card-img-top" src="{{item.anh}}" alt="">
+                                <div class="card-body ">
+                                    <h4 class="card-title">{{item.name}} </h4>
+                                    <p class="card-text">{{item.price}}</p>
+                                </div>
+                                <div class="cart mb-2">
+                                    <a (click)="lewlew(item.id)" ><i class="fas fa-eye"
+                                            style="font-size: 25px;"></i></a><br>
+                                    <a href="cart.html" ><i class="fas fa-cart-arrow-down"
+                                            style="font-size: 25px;"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="sotrang" id="mat">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item mot" (click)="page1()"><a class="page-link">1</a></li>
+                                <li class="page-item hai" (click)="page2()"><a class="page-link">2</a></li>
+                                <li class="page-item hai" (click)="page3()"><a class="page-link">3</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>

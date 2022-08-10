@@ -1,0 +1,40 @@
+<div class="login-box">
+    <h2>Login</h2>
+    <div class="alret alret-danger error" role="alret" *ngIf="error">
+        <strong>{{error}}</strong>
+    </div>
+    <form [formGroup]="formSigup" (ngSubmit)="onSubmit()">
+        <div class="user-box">
+            <input type="text" name="" required="" formControlName="email">
+            <label>Email</label>
+            <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched )">
+                <div *ngIf="f.email.errors">
+                    <div *ngIf="f.email.errors.required">
+                        <small id="userHelp" class="form-text">Không được để rỗng</small>
+                    </div>
+                    <div *ngIf="f.email.errors.email">
+                        <small id="userHelp" class="form-text">Không đúng định dạng</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="user-box">
+            <input type="password" name="" required="" formControlName="password">
+            <label>Password</label>
+            <div *ngIf="f.password.invalid && (f.password.dirty || f.password.touched )">
+                <div *ngIf="f.password.errors">
+                    <div *ngIf="f.password.errors.required">
+                        <small id="userHelp" class="form-text ">Không được để rỗng</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <button class="" style="border: none ;">login</button>
+        </a>
+    </form>
+</div>

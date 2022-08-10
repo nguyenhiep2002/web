@@ -1,0 +1,43 @@
+<div class="container-fluid">
+        <nav class="navbar navbar-light bg-light mt-3 mb-3">
+                    <button type="button" routerLink="/admin/add" class="btn btn-primary">Thêm sản phẩm mới<span class="ml-2"><i
+                                class="fas fa-plus-square"></i></span></button>
+
+            <div class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="keyword">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </div>
+        </nav>
+</div>
+<div class="container-fluid">
+    <div class="row">
+<table class="table">
+    <thead>
+        <tr>
+
+            <th scope="col">ID</th>
+            <th scope="col">Tên sản phẩm</th>
+            <th scope="col">Ảnh sản phẩm</th>
+            <th scope="col">Giá sản phẩm</th>
+            <th scope="col">ID Danh mục</th>
+            <th scope="col">Thay đổi </th>
+            <th scope="col">Xóa</th>
+            <th scope="col">View</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of all | search: keyword">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td><img src="{{item.anh}}" alt="" width="75px"></td>
+            <td>{{item.price}}</td>
+            <td>{{item.danhmuc_con}}</td>
+            <td (click)="fix(item.id)"><i class="fas fa-pen-square ml-3" style="font-size: 25px;color:green"></i></td>
+            <td (click)="dete(item.id)"><i class="fas fa-trash-alt" style="color:red;font-size: 20px;"></i></td>
+            <td><a (click)="lewlew(item.id)" ><i class="fas fa-search-plus"></i></a></td>
+        </tr>
+
+    </tbody>
+</table>
+</div>
+</div>

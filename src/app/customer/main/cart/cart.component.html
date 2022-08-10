@@ -1,0 +1,95 @@
+<div class="bannershop mb-4" style="background-image: url(assets/images/bannershop.png);">
+    <div class="text">
+        <h1>Giỏ hàng của bạn</h1>
+    </div>
+</div>
+<div class="main mt-5 mb-5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 ">
+                <div class="left-buy bum">
+                    <div class="row title_info">
+                        <div class="col-md-4">
+                            <p>Sản phẩm</p>
+                        </div>
+                        <div class="col-md-2">
+                            <p>Giá</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p>Số lượng</p>
+                        </div>
+                        <div class="col-md-2">
+                            <p>Thành tiền</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-buy sp">
+                    <div class="row d-flex align-items-center info_border mt-4 " *ngFor="let item of listcart">
+                        <div class="img_info col-md-4">
+                            <img src="{{item.anh}}" alt="">
+                            <div class="img_info_P">
+                                <p>{{item.name}}</p>
+                            </div>
+                        </div>
+                        <div class="price_info col-md-2">
+                            <p>{{item.price}}</p>
+                        </div>
+                        <div class="cong_tru soluong col-md-3">
+                            <!-- <span style="margin-right: 20px;">Số lượng:</span> -->
+                            <button class="tinh" id="tru" (click)="mark('-',item.id)">-</button>
+                            <input type="text" id="quantily{{item.id}}" class="quantily-ip" style="width: 50px;text-align: center;" value="{{item.quantity}}">
+                            <button class="tinh" id="cong" (click)="mark('+',item.id)">+</button>
+                        </div>
+                        <div class="kq col-md-2">
+                            <!-- <input type="text" value="{{item.price * item.quantity}}" id="kq"><span>đ</span> -->
+                            <p>{{item.price * item.quantity}}</p><span>đ</span>
+                        </div>
+                        <div class="xoa col-md-1">
+                            <button class="bien" style="border: none; background-color: #fff;" (click)="deletecart(item.id)"><i
+                                    class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="apply mt-4">
+                    <input type="text" placeholder="Vocher giảm giá">
+                    <button class="btn">Áp dụng</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div><div class="container-fluid mb-5   ">
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 right-buy">
+            <h2>Thành tiền</h2>
+            <div class="right-buy-info1">
+                <label for="">Thành tiền</label>
+                <div class="display-fl">
+                            <input type="text" value="{{total}}" id="kq2">
+                    <p class="cl-p-gr">đ</p>
+                </div>
+            </div>
+            <!-- <img src="/src/assets/images/cat.gif" alt=""> -->
+            <div class="right-buy-info">
+                <label for="">Phí vận chuyển</label>
+                <span>{{ship}}đ</span>
+            </div>
+            <div class="right-buy-info">
+                <label for="">Mã giảm giá</label>
+                <span>-0đ</span>
+            </div>
+            <div class="right-kq">
+                <label for="">Tổng</label>
+                <div class="display-fl">
+                    <!-- <input type="text" class="total" id="kq3" value="{{total + ship}}"> -->
+                    <h5>{{total + ship}}</h5>
+                    
+                    <span class="cl-p-bl">đ</span>
+                </div>
+            </div>
+            <button class="btn btn-confirm mt-2" (click)="ok()">XÁC NHẬN ĐẶT HÀNG</button>
+        </div>
+    </div>
+</div>

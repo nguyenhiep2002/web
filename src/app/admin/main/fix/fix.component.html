@@ -1,0 +1,39 @@
+<form [formGroup]="formFix" (ngSubmit)="onSubmit()">
+    <div class="form-group mt-5">
+        <label for="exampleInputEmail1">Tên sản phẩm :</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            formControlName="name" >
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Danh mục sản phẩm :</label>
+        <div class="form-group">
+            <select class="form-control" name="" id="" formControlName="danhmuc_con">
+                <option *ngFor="let item of lit" value="{{item.id}}">{{item.name}}: {{item.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Giá sản phẩm :</label>
+        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            formControlName="price">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Giá khuyến mãi :</label>
+        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            formControlName="price_sale" >
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1" class="mr-2">Ảnh sản phẩm</label>
+        <input type="file" class="" id="exampleInputEmail1" aria-describedby="emailHelp"(change)="changeImage($event)" >
+
+    </div>
+    <div class="form-group">
+        <img src="" alt="" width="250px">
+        <img src="{{image}}" alt="" width="250px">
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Thay đổi sản phẩm</button>
+    </div>
+
+</form>
